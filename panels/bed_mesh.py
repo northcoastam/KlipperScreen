@@ -23,9 +23,9 @@ class BedMeshPanel(ScreenPanel):
         self.active_mesh = None
         self.profiles = {}
         self.buttons = {
-            'add': self._gtk.Button("increase", " " + _("Add profile"), "color1", .66, Gtk.PositionType.LEFT, 1),
-            'calib': self._gtk.Button("refresh", " " + _("Calibrate"), "color3", .66, Gtk.PositionType.LEFT, 1),
-            'clear': self._gtk.Button("cancel", " " + _("Clear"), "color2", .66, Gtk.PositionType.LEFT, 1),
+            'add': self._gtk.Button("increase", " " + _("Add profile"), "color1", self.bts, Gtk.PositionType.LEFT, 1),
+            'calib': self._gtk.Button("refresh", " " + _("Calibrate"), "color3", self.bts, Gtk.PositionType.LEFT, 1),
+            'clear': self._gtk.Button("cancel", " " + _("Clear"), "color2", self.bts, Gtk.PositionType.LEFT, 1),
         }
         self.buttons['add'].connect("clicked", self.show_create_profile)
         self.buttons['add'].set_hexpand(True)
@@ -125,8 +125,8 @@ class BedMeshPanel(ScreenPanel):
         name.connect("clicked", self.update_graph, profile)
 
         buttons = {
-            "save": self._gtk.Button("complete", None, "color4", .75),
-            "delete": self._gtk.Button("cancel", None, "color2", .75),
+            "save": self._gtk.Button("complete", None, "color4", self.bts),
+            "delete": self._gtk.Button("cancel", None, "color2", self.bts),
         }
         buttons["save"].connect("clicked", self.send_save_mesh, profile)
         buttons["delete"].connect("clicked", self.send_remove_mesh, profile)
@@ -237,8 +237,7 @@ class BedMeshPanel(ScreenPanel):
             self.labels['profile_name'].set_text('')
             self.labels['profile_name'].set_hexpand(True)
             self.labels['profile_name'].connect("activate", self.create_profile)
-            self.labels['profile_name'].connect("focus-in-event", self._show_keyboard)
-            self.labels['profile_name'].grab_focus_without_selecting()
+            self.labels['profile_name'].connect("focus-in-event", self._screen.show_keyboard)
 
             save = self._gtk.Button("complete", _("Save"), "color3")
             save.set_hexpand(False)
@@ -256,11 +255,8 @@ class BedMeshPanel(ScreenPanel):
             self.labels['create_profile'].pack_start(box, True, True, 5)
 
         self.content.add(self.labels['create_profile'])
-        self._show_keyboard()
+        self.labels['profile_name'].grab_focus_without_selecting()
         self.show_create = True
-
-    def _show_keyboard(self, widget=None, event=None):
-        self._screen.show_keyboard(entry=self.labels['profile_name'])
 
     def create_profile(self, widget):
         name = self.labels['profile_name'].get_text()

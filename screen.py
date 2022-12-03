@@ -589,6 +589,8 @@ class KlipperScreen(Gtk.Window):
             os.system("xset -display :0 +dpms")
             if functions.get_DPMS_state() == functions.DPMS_State.Fail:
                 logging.info("DPMS State FAIL")
+                self.show_popup_message("DPMS has failed to load")
+                self._config.set("main", "use_dpms", "False")
             else:
                 logging.debug("Using DPMS")
                 os.system("xset -display :0 s off")
@@ -763,6 +765,8 @@ class KlipperScreen(Gtk.Window):
         self.gtk.remove_dialog(dialog)
         if response_id == Gtk.ResponseType.OK:
             self._send_action(None, method, params)
+        if method == "server.files.delete_directory":
+            GLib.timeout_add_seconds(2, self.files.refresh_files)
 
     def _send_action(self, widget, method, params):
         logging.info(f"{method}: {params}")
@@ -889,7 +893,7 @@ class KlipperScreen(Gtk.Window):
             self.gtk.remove_dialog(dialog)
         self.show_panel('job_status', "job_status", _("Printing"), 2)
 
-    def show_keyboard(self, widget=None, event=None, entry=None):
+    def show_keyboard(self, entry=None, event=None):
         if self.keyboard is not None:
             return
 
@@ -928,17 +932,13 @@ class KlipperScreen(Gtk.Window):
             return
         box.get_style_context().add_class("keyboard_box")
         box.add(Keyboard(self, self.remove_keyboard, entry=entry))
-        self.keyboard = {
-            "entry": entry,
-            "box": box
-        }
+        self.keyboard = {"box": box}
         self.base_panel.content.pack_end(box, False, False, 0)
         self.base_panel.content.show_all()
 
     def remove_keyboard(self, widget=None, event=None):
         if self.keyboard is None:
             return
-
         if 'process' in self.keyboard:
             os.kill(self.keyboard['process'].pid, SIGTERM)
         self.base_panel.content.remove(self.keyboard['box'])

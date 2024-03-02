@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 18:17-0300\n"
+"POT-Creation-Date: 2024-01-12 21:42-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: boyon\n"
 "Language-Team: \n"
@@ -38,22 +38,25 @@ msgstr "加速度:"
 msgid "Accept"
 msgstr "承諾する"
 
-msgid "Actions"
-msgstr "操作"
-
 msgid "Add profile"
 msgstr "プロファイルの追加"
+
+msgid "All"
+msgstr ""
 
 msgid "Apply"
 msgstr "適用する"
 
 #, python-format
-msgid "Apply %.2f offset to Endstop?"
-msgstr "エンドストップにオフセットに  %.2f を適用しますか？"
+msgid "Apply %s%.3f offset to Endstop?"
+msgstr ""
 
 #, python-format
-msgid "Apply %s%.2f offset to Probe?"
-msgstr "プローブオフセットに  %s%.2f を適用しますか？"
+msgid "Apply %s%.3f offset to Probe?"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
 
 msgid "Are you sure do you want to exclude the object?"
 msgstr "対象を除外しますか？"
@@ -82,6 +85,9 @@ msgstr "自動校正"
 msgid "Auto-close notifications"
 msgstr "自動終了通知"
 
+msgid "Auto-open Extrude On Pause"
+msgstr ""
+
 msgid "Auto-scroll"
 msgstr "自動スクロール"
 
@@ -100,11 +106,11 @@ msgstr "校正"
 msgid "Calibrated"
 msgstr "構成済み"
 
-msgid "Calibrated, save configuration to make it permanent"
-msgstr "校正完了しました。次回起動時以降も適用するには設定を保存してください"
-
 msgid "Calibrating"
 msgstr "校正中"
+
+msgid "Camera"
+msgstr ""
 
 msgid "Can't set above the maximum:"
 msgstr "上限値を超えて設定できません:"
@@ -142,9 +148,6 @@ msgstr "終了"
 msgid "Complete"
 msgstr "完了"
 
-msgid "Configuration"
-msgstr "設定"
-
 msgid "Confirm Emergency Stop"
 msgstr "緊急停止時に確認する"
 
@@ -158,17 +161,17 @@ msgstr "%s へ接続中・・・"
 msgid "Console"
 msgstr "コンソール"
 
-msgid "Continue"
-msgstr "継続"
-
 msgid "Cooldown"
 msgstr "クールダウン"
+
+msgid "DPMS has failed to load and has been disabled"
+msgstr ""
 
 msgid "Date"
 msgstr "日付"
 
-msgid "Decrease"
-msgstr "減少"
+msgid "Delete Directory?"
+msgstr ""
 
 msgid "Delete File?"
 msgstr "ファイルを削除しますか？"
@@ -179,9 +182,6 @@ msgstr "選択解除"
 msgid "Disable Motors"
 msgstr "モーターの無効化"
 
-msgid "Disable XY"
-msgstr "XY軸制御の無効化"
-
 msgid "Distance (mm)"
 msgstr "距離(mm)"
 
@@ -191,6 +191,9 @@ msgstr "元に戻しますか %s ？"
 
 msgid "Elapsed:"
 msgstr "経過時間:"
+
+msgid "Ended official support in June 2023"
+msgstr ""
 
 msgid "Error"
 msgstr "エラー"
@@ -237,6 +240,9 @@ msgstr "ファイル"
 msgid "File:"
 msgstr "ファイル:"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Finding ADXL"
 msgstr "ADXLを検索中"
 
@@ -279,6 +285,9 @@ msgstr "温度を非表示にする"
 msgid "Hide temp."
 msgstr "温度を非表示にする"
 
+msgid "Home"
+msgstr ""
+
 msgid "Home All"
 msgstr ""
 
@@ -294,22 +303,22 @@ msgstr "Home Y"
 msgid "Home Z"
 msgstr "Home Z"
 
-msgid "Homing"
-msgstr "Homing"
-
 msgid "Host"
 msgstr ""
 
 msgid "Hostname"
 msgstr "Hostname"
 
+msgid "ID"
+msgstr ""
+
 msgid "Icon Theme"
 msgstr "アイコンテーマ"
 
-msgid "Increase"
-msgstr "増加"
-
 msgid "Initializing printer..."
+msgstr ""
+
+msgid "Initiate a PID calibration for:"
 msgstr ""
 
 msgid "Input Shaper"
@@ -333,6 +342,9 @@ msgstr "Y軸を反対にする"
 msgid "Invert Z"
 msgstr "X軸を反対にする"
 
+msgid "It may take more than 5 minutes depending on the heater power."
+msgstr ""
+
 msgid "Klipper Restart"
 msgstr "Klipperを再起動する"
 
@@ -351,8 +363,12 @@ msgstr "Klipperは起動中です"
 msgid "Klipper will reboot"
 msgstr "Klipperは再起動します"
 
-msgid "KlipperScreen will reboot"
-msgstr "KlipperScreenは再起動します"
+msgid "KlipperScreen will drop support in June 2024"
+msgstr ""
+
+msgid ""
+"LOAD_FILAMENT/UNLOAD_FILAMENT are hidden and should be used from extrude"
+msgstr ""
 
 msgid "Language"
 msgstr "言語"
@@ -360,8 +376,14 @@ msgstr "言語"
 msgid "Large"
 msgstr "大"
 
+msgid "Last Used"
+msgstr ""
+
 msgid "Layer:"
 msgstr "レイヤー:"
+
+msgid "Leds"
+msgstr ""
 
 msgid "Left:"
 msgstr "左:"
@@ -370,6 +392,9 @@ msgid "Limits"
 msgstr "制限"
 
 msgid "Load"
+msgstr ""
+
+msgid "Loading..."
 msgstr ""
 
 msgid "Lower Nozzle"
@@ -383,6 +408,9 @@ msgstr "マクロ"
 
 msgid "Main Menu"
 msgstr "メインメニュー"
+
+msgid "Material"
+msgstr ""
 
 msgid "Max"
 msgstr "最大"
@@ -423,6 +451,9 @@ msgstr "変更"
 msgid "Moonraker: connected"
 msgstr "Moonraker: 接続済"
 
+msgid "More"
+msgstr ""
+
 msgid "Move"
 msgstr "移動"
 
@@ -441,13 +472,31 @@ msgstr "未"
 msgid "New"
 msgstr "新"
 
+msgid "No elegible macros:"
+msgstr ""
+
+msgid "No mesh has been loaded"
+msgstr ""
+
+msgid "No wireless interface has been found"
+msgstr ""
+
 msgid ""
 "Not supported for auto-detection, it needs to be configured in klipperscreen."
 "conf"
 msgstr ""
 
+msgid "Not working or not configured"
+msgstr ""
+
 msgid "Nothing selected"
 msgstr "未選択"
+
+msgid "Notification log empty"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
 
 #, python-format
 msgid "Outdated by %d"
@@ -541,6 +590,9 @@ msgstr ""
 msgid "Refresh"
 msgstr "最新表示"
 
+msgid "Rename/Move:"
+msgstr ""
+
 msgid "Restart"
 msgstr "再起動"
 
@@ -599,10 +651,6 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#, python-format
-msgid "Sending Power ON signal to: %s"
-msgstr ""
-
 msgid "Set Temp"
 msgstr "温度設定"
 
@@ -615,6 +663,9 @@ msgstr "表示"
 msgid "Show Heater Power"
 msgstr ""
 
+msgid "Show Scrollbars Buttons"
+msgstr ""
+
 msgid "Shutdown"
 msgstr "シャットダウン"
 
@@ -623,9 +674,6 @@ msgstr "サイズ"
 
 msgid "Slicer"
 msgstr "スライサー"
-
-msgid "Slicer Time correction (%)"
-msgstr "スライサーの補正時間(%)"
 
 msgid "Slicer:"
 msgstr "スライサー:"
@@ -647,6 +695,9 @@ msgstr ""
 
 msgid "Square Corner Velocity"
 msgstr "四隅の速度"
+
+msgid "Standby"
+msgstr ""
 
 msgid "Start"
 msgstr "開始"
@@ -705,6 +756,12 @@ msgstr "更新中"
 msgid "Uploaded"
 msgstr "アップロード済"
 
+msgid "Warning"
+msgstr ""
+
+msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
 msgid "XY Move Speed (mm/s)"
 msgstr "XY移動速度 (mm/s)"
 
@@ -737,8 +794,15 @@ msgid "hour"
 msgid_plural "hours"
 msgstr[0] ""
 
-msgid "minutes"
-msgstr "分"
+msgid "macros that use 'rename_existing' are hidden"
+msgstr ""
+
+msgid "macros with a name starting with '_' are hidden"
+msgstr ""
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] ""
 
 msgid "mm"
 msgstr ""
@@ -751,6 +815,34 @@ msgstr ""
 
 msgid "mm³/s"
 msgstr ""
+
+#~ msgid "Continue"
+#~ msgstr "継続"
+
+#~ msgid "Actions"
+#~ msgstr "操作"
+
+#~ msgid "Configuration"
+#~ msgstr "設定"
+
+#~ msgid "Homing"
+#~ msgstr "Homing"
+
+#~ msgid "Disable XY"
+#~ msgstr "XY軸制御の無効化"
+
+#~ msgid "Slicer Time correction (%)"
+#~ msgstr "スライサーの補正時間(%)"
+
+#~ msgid "Calibrated, save configuration to make it permanent"
+#~ msgstr ""
+#~ "校正完了しました。次回起動時以降も適用するには設定を保存してください"
+
+#~ msgid "Decrease"
+#~ msgstr "減少"
+
+#~ msgid "Increase"
+#~ msgstr "増加"
 
 #~ msgid "Sort:"
 #~ msgstr "ソート順:"

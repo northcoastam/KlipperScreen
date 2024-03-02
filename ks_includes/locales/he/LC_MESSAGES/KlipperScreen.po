@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Klipperscreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 18:17-0300\n"
+"POT-Creation-Date: 2024-01-12 21:42-0300\n"
 "PO-Revision-Date: 2022-11-30 18:11-0300\n"
 "Last-Translator: Tal Rahav <talrhv1@gmail.com>\n"
 "Language-Team: \n"
@@ -45,22 +45,25 @@ msgstr "האצה"
 msgid "Accept"
 msgstr "אשר"
 
-msgid "Actions"
-msgstr "פעולות"
-
 msgid "Add profile"
 msgstr "הוסף פרופיל"
+
+msgid "All"
+msgstr ""
 
 msgid "Apply"
 msgstr "החל"
 
 #, python-format
-msgid "Apply %.2f offset to Endstop?"
-msgstr "הוסף %.2f לתחנת קצה?"
+msgid "Apply %s%.3f offset to Endstop?"
+msgstr ""
 
 #, python-format
-msgid "Apply %s%.2f offset to Probe?"
-msgstr "החל היסט של %s%.2f על בדיקה"
+msgid "Apply %s%.3f offset to Probe?"
+msgstr ""
+
+msgid "Archived"
+msgstr ""
 
 msgid "Are you sure do you want to exclude the object?"
 msgstr ""
@@ -89,6 +92,9 @@ msgstr "כיול אוטומטי"
 msgid "Auto-close notifications"
 msgstr "סגירת התראות אוטומטית"
 
+msgid "Auto-open Extrude On Pause"
+msgstr ""
+
 msgid "Auto-scroll"
 msgstr "גלילה אוטומטית"
 
@@ -107,11 +113,11 @@ msgstr "לכייל"
 msgid "Calibrated"
 msgstr "מכויל"
 
-msgid "Calibrated, save configuration to make it permanent"
-msgstr "מכויל, שמור את התצורה כדי שהיא תהיה קבועה"
-
 msgid "Calibrating"
 msgstr "מכייל"
+
+msgid "Camera"
+msgstr ""
 
 msgid "Can't set above the maximum:"
 msgstr "לא ניתן להגדיר מעל המקסימום:"
@@ -149,9 +155,6 @@ msgstr "סגור"
 msgid "Complete"
 msgstr "הסתיים"
 
-msgid "Configuration"
-msgstr "קונפיגורציה"
-
 msgid "Confirm Emergency Stop"
 msgstr "אשר עצירת חירום"
 
@@ -165,17 +168,17 @@ msgstr "מתחבר ל- %s"
 msgid "Console"
 msgstr "קונסול"
 
-msgid "Continue"
-msgstr "המשך"
-
 msgid "Cooldown"
 msgstr "הפעל קירור"
+
+msgid "DPMS has failed to load and has been disabled"
+msgstr ""
 
 msgid "Date"
 msgstr "תאריך"
 
-msgid "Decrease"
-msgstr "הורד"
+msgid "Delete Directory?"
+msgstr ""
 
 msgid "Delete File?"
 msgstr "מחק קובץ"
@@ -186,9 +189,6 @@ msgstr "בטל את הבחירה"
 msgid "Disable Motors"
 msgstr "השבת מנועים"
 
-msgid "Disable XY"
-msgstr "השבת את XY"
-
 msgid "Distance (mm)"
 msgstr "מרחק (מ\"מ)"
 
@@ -198,6 +198,9 @@ msgstr "האם ברצונך לשחזר %s?"
 
 msgid "Elapsed:"
 msgstr "זמן שעבר:"
+
+msgid "Ended official support in June 2023"
+msgstr ""
 
 msgid "Error"
 msgstr "שגיאה"
@@ -244,6 +247,9 @@ msgstr "קובץ"
 msgid "File:"
 msgstr ""
 
+msgid "Filter"
+msgstr ""
+
 msgid "Finding ADXL"
 msgstr "מחפש ADXL"
 
@@ -286,6 +292,9 @@ msgstr "הסתר חיישנים בטמפ'."
 msgid "Hide temp."
 msgstr "הסתר טמפרטורה"
 
+msgid "Home"
+msgstr "איפוס"
+
 msgid "Home All"
 msgstr "איפוס XYZ"
 
@@ -301,23 +310,23 @@ msgstr "איפוס Y"
 msgid "Home Z"
 msgstr "איפוס Z"
 
-msgid "Homing"
-msgstr "איפוס צירים"
-
 msgid "Host"
 msgstr "שרת"
 
 msgid "Hostname"
 msgstr "שם שרת"
 
+msgid "ID"
+msgstr ""
+
 msgid "Icon Theme"
 msgstr "ערכת נושא"
 
-msgid "Increase"
-msgstr "הגדל"
-
 msgid "Initializing printer..."
 msgstr "מאתחל מדפסת..."
+
+msgid "Initiate a PID calibration for:"
+msgstr ""
 
 msgid "Input Shaper"
 msgstr "מעצב גימור"
@@ -340,6 +349,9 @@ msgstr "הפוך את Y"
 msgid "Invert Z"
 msgstr "הפוך את Z"
 
+msgid "It may take more than 5 minutes depending on the heater power."
+msgstr ""
+
 msgid "Klipper Restart"
 msgstr "Klipper יאתחל מחדש"
 
@@ -358,8 +370,12 @@ msgstr "קליפר מנסה לעלות"
 msgid "Klipper will reboot"
 msgstr "קליפר יבצע אתחול"
 
-msgid "KlipperScreen will reboot"
-msgstr "KlipperScreen יאתחל מחדש"
+msgid "KlipperScreen will drop support in June 2024"
+msgstr ""
+
+msgid ""
+"LOAD_FILAMENT/UNLOAD_FILAMENT are hidden and should be used from extrude"
+msgstr ""
 
 msgid "Language"
 msgstr "שפה"
@@ -367,8 +383,14 @@ msgstr "שפה"
 msgid "Large"
 msgstr "גדול"
 
+msgid "Last Used"
+msgstr ""
+
 msgid "Layer:"
 msgstr "שכבה"
+
+msgid "Leds"
+msgstr ""
 
 msgid "Left:"
 msgstr "זמן שנותר:"
@@ -378,6 +400,9 @@ msgstr "גבולות"
 
 msgid "Load"
 msgstr "טעינה"
+
+msgid "Loading..."
+msgstr ""
 
 msgid "Lower Nozzle"
 msgstr "הנמך דיזה"
@@ -390,6 +415,9 @@ msgstr "מקרואים"
 
 msgid "Main Menu"
 msgstr "תפריט ראשי"
+
+msgid "Material"
+msgstr ""
 
 msgid "Max"
 msgstr "מקסימום"
@@ -430,6 +458,9 @@ msgstr "שונה"
 msgid "Moonraker: connected"
 msgstr "Moonraker: מחובר"
 
+msgid "More"
+msgstr ""
+
 msgid "Move"
 msgstr "הזזת צירים"
 
@@ -448,13 +479,31 @@ msgstr ""
 msgid "New"
 msgstr "חדש"
 
+msgid "No elegible macros:"
+msgstr ""
+
+msgid "No mesh has been loaded"
+msgstr ""
+
+msgid "No wireless interface has been found"
+msgstr ""
+
 msgid ""
 "Not supported for auto-detection, it needs to be configured in klipperscreen."
 "conf"
 msgstr "איתור אוטומטי אינו נתמך, זה צריך להיות מוגדר ב klipperscreen"
 
+msgid "Not working or not configured"
+msgstr ""
+
 msgid "Nothing selected"
 msgstr "שום דבר לא נבחר"
+
+msgid "Notification log empty"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
 
 #, python-format
 msgid "Outdated by %d"
@@ -551,6 +600,9 @@ msgstr "התייחסות"
 msgid "Refresh"
 msgstr "רענון"
 
+msgid "Rename/Move:"
+msgstr ""
+
 msgid "Restart"
 msgstr "אתחל"
 
@@ -609,10 +661,6 @@ msgstr "בחר"
 msgid "Send"
 msgstr "שליחה"
 
-#, python-format
-msgid "Sending Power ON signal to: %s"
-msgstr "שולח אות הפעלה אל: %s"
-
 msgid "Set Temp"
 msgstr "הגדר טמפ'"
 
@@ -625,6 +673,9 @@ msgstr "הצג"
 msgid "Show Heater Power"
 msgstr "הצג זרם מיטה"
 
+msgid "Show Scrollbars Buttons"
+msgstr ""
+
 msgid "Shutdown"
 msgstr "כיבוי"
 
@@ -633,9 +684,6 @@ msgstr "גודל"
 
 msgid "Slicer"
 msgstr "סלייסר"
-
-msgid "Slicer Time correction (%)"
-msgstr "תיקון זמן פריסה (%)"
 
 msgid "Slicer:"
 msgstr ""
@@ -657,6 +705,9 @@ msgstr "מהירות"
 
 msgid "Square Corner Velocity"
 msgstr "מהירות פינה מרובעת"
+
+msgid "Standby"
+msgstr ""
 
 msgid "Start"
 msgstr "התחל"
@@ -715,6 +766,12 @@ msgstr "מעדכן"
 msgid "Uploaded"
 msgstr "הועלה"
 
+msgid "Warning"
+msgstr ""
+
+msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
 msgid "XY Move Speed (mm/s)"
 msgstr "מהירות תנועה XY (מ\"מ/שנייה)"
 
@@ -753,8 +810,18 @@ msgstr[1] "שעות"
 msgstr[2] "שעות"
 msgstr[3] "שעות"
 
-msgid "minutes"
-msgstr "דקות"
+msgid "macros that use 'rename_existing' are hidden"
+msgstr ""
+
+msgid "macros with a name starting with '_' are hidden"
+msgstr ""
+
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
 
 msgid "mm"
 msgstr "מ''מ"
@@ -767,6 +834,37 @@ msgstr "mm/s²"
 
 msgid "mm³/s"
 msgstr ""
+
+#~ msgid "Continue"
+#~ msgstr "המשך"
+
+#~ msgid "Actions"
+#~ msgstr "פעולות"
+
+#~ msgid "Configuration"
+#~ msgstr "קונפיגורציה"
+
+#~ msgid "Homing"
+#~ msgstr "איפוס צירים"
+
+#~ msgid "Disable XY"
+#~ msgstr "השבת את XY"
+
+#~ msgid "Slicer Time correction (%)"
+#~ msgstr "תיקון זמן פריסה (%)"
+
+#~ msgid "Calibrated, save configuration to make it permanent"
+#~ msgstr "מכויל, שמור את התצורה כדי שהיא תהיה קבועה"
+
+#~ msgid "Decrease"
+#~ msgstr "הורד"
+
+#~ msgid "Increase"
+#~ msgstr "הגדל"
+
+#, python-format
+#~ msgid "Sending Power ON signal to: %s"
+#~ msgstr "שולח אות הפעלה אל: %s"
 
 #~ msgid "Sort:"
 #~ msgstr "מיין"
@@ -804,9 +902,6 @@ msgstr ""
 
 #~ msgid "Delete"
 #~ msgstr "מחק"
-
-#~ msgid "Home"
-#~ msgstr "איפוס"
 
 #~ msgid "Off"
 #~ msgstr "כבוי"

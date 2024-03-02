@@ -1,25 +1,18 @@
 import logging
-
 import gi
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Pango
-
 from ks_includes.screen_panel import ScreenPanel
 
 
-def create_panel(*args):
-    return PowerPanel(*args)
-
-
-class PowerPanel(ScreenPanel):
+class Panel(ScreenPanel):
     def __init__(self, screen, title):
         super().__init__(screen, title)
         self.devices = {}
 
         # Create a grid for all devices
-        self.labels['devices'] = Gtk.Grid()
-        self.labels['devices'].set_valign(Gtk.Align.CENTER)
+        self.labels['devices'] = Gtk.Grid(valign=Gtk.Align.CENTER)
 
         self.load_power_devices()
 
@@ -30,37 +23,28 @@ class PowerPanel(ScreenPanel):
         self.content.add(scroll)
 
     def activate(self):
-        devices = self._screen.printer.get_power_devices()
+        devices = self._printer.get_power_devices()
         for x in devices:
             self.devices[x]['switch'].disconnect_by_func(self.on_switch)
-            self.devices[x]['switch'].set_active(self._screen.printer.get_power_device_status(x) == "on")
+            self.devices[x]['switch'].set_active(self._printer.get_power_device_status(x) == "on")
 
             self.devices[x]['switch'].connect("notify::active", self.on_switch, x)
 
     def add_device(self, device):
-        name = Gtk.Label()
+        name = Gtk.Label(
+            hexpand=True, vexpand=True, halign=Gtk.Align.START, valign=Gtk.Align.CENTER,
+            wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR)
         name.set_markup(f"<big><b>{device}</b></big>")
-        name.set_hexpand(True)
-        name.set_vexpand(True)
-        name.set_halign(Gtk.Align.START)
-        name.set_valign(Gtk.Align.CENTER)
-        name.set_line_wrap(True)
-        name.set_line_wrap_mode(Pango.WrapMode.WORD_CHAR)
-
-        switch = Gtk.Switch()
-        switch.set_hexpand(False)
-        switch.set_active(self._screen.printer.get_power_device_status(device) == "on")
+        switch = Gtk.Switch(hexpand=False, active=(self._printer.get_power_device_status(device) == "on"),
+                            width_request=round(self._gtk.font_size * 7),
+                            height_request=round(self._gtk.font_size * 3.5))
         switch.connect("notify::active", self.on_switch, device)
-        switch.set_property("width-request", round(self._gtk.get_font_size() * 7))
-        switch.set_property("height-request", round(self._gtk.get_font_size() * 3.5))
 
         labels = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         labels.add(name)
 
-        dev = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=5)
-        dev.set_hexpand(True)
-        dev.set_vexpand(False)
-        dev.set_valign(Gtk.Align.CENTER)
+        dev = Gtk.Box(
+            spacing=5, hexpand=True, vexpand=False, valign=Gtk.Align.CENTER)
         dev.add(labels)
         dev.add(switch)
 
@@ -77,7 +61,7 @@ class PowerPanel(ScreenPanel):
         self.labels['devices'].show_all()
 
     def load_power_devices(self):
-        devices = self._screen.printer.get_power_devices()
+        devices = self._printer.get_power_devices()
         for x in devices:
             self.add_device(x)
 
